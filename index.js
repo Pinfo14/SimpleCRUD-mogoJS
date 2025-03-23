@@ -8,7 +8,14 @@ const producRouter = require('./routes/product.route')
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-app.use("/api/products",producRouter)
+app.get('/products/new', (req, res) => {
+  res.render('addProducts'); // Renderiza o form
+});
+app.use("/products",producRouter)
+
+/*app.get('/products',(req,res)=>{
+  res.render('products.ejs')
+})*/
 
 
 //!DB connection
@@ -24,6 +31,6 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', function (req, res) {
-  res.send("hello")
+  res.send('hi')
 })
 
