@@ -20,7 +20,7 @@ app.use("/products",producRouter)
 
 //!DB connection
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://sa:Pinfo12435@cluster75167.y9shp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster75167')
+mongoose.connect('mongodb+srv://sa:@cluster75167.y9shp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster75167')
   .then(() => console.log('Connected!'),app.listen(3000, () => console.log("Listening on port 3000")) )
   .catch(() => console.log('Failed to connect'));
 
